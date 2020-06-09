@@ -1,0 +1,83 @@
+@mixin flex($display, $justify, $align, $direction, $wrap) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 16px, $lower-range: 360px, $upper-range: 1750px) {
+
+	font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+	@media screen and (max-width: $lower-range) {
+		font-size: $min-font-size;
+	}
+	@media screen and (min-width: $upper-range){
+		font-size: $max-font-size;
+	}
+}
+/****** Fonts *****/
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Austin';
+    src: url('../fonts/Austin-Ultra.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Barlow-Light';
+    src: url('../fonts/BarlowCondensed-Light.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('../fonts/BarlowCondensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url('../fonts/BarlowCondensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Barlow-Semi';
+    src: url('../fonts/BarlowCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url('../fonts/BarlowCondensed-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}

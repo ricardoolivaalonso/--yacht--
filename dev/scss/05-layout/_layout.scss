@@ -1,0 +1,60 @@
+.header{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    max-height: 368px;
+    height: 30vw;
+    min-height: 300px;
+    position: relative;
+
+    @media(max-width: $sm){ display: none; }
+}
+.main{
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 259px 1fr;
+    grid-template-areas:
+        'filter results'
+        'filter yatch'
+        'filter featured'
+    ;
+    @media(max-width: $md){ grid-template-columns: 240px 1fr; }
+    @media(max-width: $sm){ display: block; }
+
+}
+.filter{
+    grid-area: filter;
+    margin: $gap #{$gap - 10px};
+    @media(max-width: $sm){
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: none;
+    }
+
+}
+.results-form{
+    grid-area: results;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    margin: $gap;
+    padding: 0 .875rem;
+
+
+
+    @media(max-width: $sm){ margin: $gap / 2; }
+}
+.yacht{
+    grid-area: yatch;
+    margin: 0 $gap;
+
+    @media(max-width: $sm){ margin: 0 $gap / 2; }
+}
+.featured{
+    grid-area: featured;
+    margin-bottom: 115px;
+}

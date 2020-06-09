@@ -1,0 +1,28 @@
+.results-form{
+    background-color: $gray-0;
+
+    &__quantity{
+        font-family: 'Roboto-Medium';
+        font-size: 15px;
+        margin-right: 30px;
+    }
+    &__reset{
+        font-family: 'Roboto-Regular';
+        font-size: 12.5px;
+        text-decoration: underline;
+    }
+    &__select{
+        font-family: 'Roboto-Regular';
+        font-size: 12.5px;
+        width: 134px;
+        height: 31px;
+        padding: 0 12px;
+
+        border-radius: 4px;
+        border: 1px solid $gray-02;
+        box-shadow: 1px 2px 2px $gray-02;
+
+        @media(max-width: $sm){ display: none;}
+
+    }
+}

@@ -1,0 +1,91 @@
+.yacht{
+
+    &__list{
+        width: 100%;
+        display: grid;
+        grid-gap: 24px 16px;
+        grid-template-columns: repeat(4, minmax(220px, 1fr));
+
+        @media(max-width: $lg){
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+        }
+        @media(max-width: $md){
+            grid-template-columns: repeat(2, minmax(220px, 1fr));
+        }
+        @media(max-width: $xsm){
+            grid-template-columns: 1fr;
+        }
+    }
+        &__item{
+            position: relative;
+            border-radius: 2px;
+            box-shadow: 0px 0px 2px 1px $gray-02;
+        }
+            &__img-container{
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+                &__img{ max-width: 100%; }
+                &__price,
+                &__featured{
+                    position: absolute;
+                    left: 10px;
+                    padding: 4px 9px;
+                    border-radius: 3px;
+                    font-size: 12px;
+                    font-family: 'Roboto-Regular';
+                }
+                &__price{
+                    bottom: 10px;
+                    background-color: $white;
+
+                }
+                &__featured{
+                    top: 10px;
+                    background-color: $orange;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-size: 10.5px;
+                    border-radius: 10px;
+
+                    font-family: 'Roboto-Bold';
+
+                }
+        &__info{ padding: 0 12px; }
+            &__title{
+                font-family: 'Barlow-Regular', sans-serif;
+                font-size: 22px;
+                text-transform: uppercase;
+                margin: 4px;
+            }
+            &__tags{
+                padding: 4px 0 6px;
+                &:nth-of-type(1){
+                    border-bottom: 1px solid $gray-02;
+                }
+            }
+            &__tag,
+            &__small{
+                font-family: 'Roboto-Regular', sans-serif;
+                font-size: 12px;
+                margin: 2px;
+            }
+            &__tag{
+                &--d{ color: $gray-01; }
+            }
+            &__small{ font-size: 11px; }
+        &__buttons{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 80px 0;
+        }
+            &__icon{
+                width: 15px;
+                height: 10px;
+                object-fit: contain;
+                margin: 0 5px;
+            }
+}
