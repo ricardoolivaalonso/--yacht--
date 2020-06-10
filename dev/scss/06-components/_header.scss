@@ -20,9 +20,9 @@
     }
         &__title{
             @include fluid-type(18px, 47px);
-            text-transform: uppercase;
             font-family: 'Austin';
-            letter-spacing: .14vw;            
+            letter-spacing: .14vw;
+            text-transform: uppercase;
             color: $white;
         }
         &__hr{
@@ -31,10 +31,10 @@
         }
         &__description{
             @include fluid-type(14px, 17px);
-            margin-bottom: 2vw;
-            text-transform: uppercase;
-            font-family: 'Barlow-Regular';
+            margin-bottom: 4vw;
+            font-family: 'Barlow-Medium';
             text-align: center;
+            text-transform: uppercase;
             color: $white;
 
             @media(min-width: $lg){ margin-bottom: 3.125rem;}

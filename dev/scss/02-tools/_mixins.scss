@@ -1,3 +1,4 @@
+/****** Mixins *****/
 @mixin flex($display, $justify, $align, $direction, $wrap) {
     display: $display;
     justify-content: $justify;
@@ -5,17 +6,10 @@
     flex-direction: $direction;
     flex-wrap: $wrap;
 }
-
 @mixin fluid-type($min-font-size: 12px, $max-font-size: 16px, $lower-range: 360px, $upper-range: 1750px) {
-
 	font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
-
-	@media screen and (max-width: $lower-range) {
-		font-size: $min-font-size;
-	}
-	@media screen and (min-width: $upper-range){
-		font-size: $max-font-size;
-	}
+    @media screen and (max-width: $lower-range) { font-size: $min-font-size; }
+	@media screen and (min-width: $upper-range){ font-size: $max-font-size; }
 }
 /****** Fonts *****/
 @font-face {

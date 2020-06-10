@@ -1,80 +1,101 @@
 .filter{
 
     &-form{
-        &__item{ margin-bottom: 1.5625rem; }
+        &__item{
+            margin-bottom: 1rem;
+            &:nth-of-type(4),
+            &:nth-of-type(5),
+            &:nth-of-type(6),
+            &:nth-of-type(7),
+            &:nth-of-type(8),
+            {
+                border-bottom: 1px solid $gray-1;
+            }
+        }
         &__title{
             display: block;
             font-family: 'Roboto-Medium';
-            font-size: 14px;
-            margin-bottom: 12px;
+            font-size: .875rem;
+            margin-bottom: .75rem;
+            color: $black;
+        }
+        &__icon{
+            width: 10px;
+            height: 10px;
+            object-fit: contain;
+            margin-right: .5rem;
         }
         &__row{
             position: relative;
-            margin-bottom: 12px;
+            margin-bottom: .75rem;
             font-family: 'Roboto-Regular';
-            font-size: 13px;
+            font-size: 0.8125rem;
         }
-        &__radio{ display: none;}
-        &__checkbox{
-            position: relative;
-            height: 12px;
-            width: 12px;
-            margin-right: 8px;
-            border-radius: 2px;
-            border: 1px solid $gray-01;
-            appearance: none;
-            background: none;
+            &__radio{ display: none;}
+            &__checkbox{
+                position: relative;
+                height: 12px;
+                width: 12px;
+                margin-right: .5rem;
 
-            &:checked{
-                background-color: $orange;
-                border: none;
-            }
-            &:checked ~ .filter-form__label-c{ position: absolute; }
-            &:checked ~ .filter-form__label-c::after{
-                opacity: 1;
-            }
-        }
-        &__label{ cursor: pointer; }
-        &__label-c{
-            position: absolute;
-            top: 1px;
-            left: 4px;
+                border-radius: 2px;
+                border: 1px solid $gray-2;
+                background: none;
+                appearance: none;
 
-            &::after{
-                content: '';
+                &:checked{
+                    background-color: $orange;
+                    border: none;
+                }
+                &:checked ~ .filter-form__label-c{ position: absolute; }
+                &:checked ~ .filter-form__label-c::after{ opacity: 1; }
+            }
+            &__label{
+                font-size: .8125rem;
+                cursor: pointer;
+                color: $gray-6;
+            }
+            &__label-c{
                 position: absolute;
-                width: 4px;
-                height: 8px;
-                border-right: 2px solid $white;
-                border-bottom: 2px solid $white;
-                transform:  rotateZ(40deg);
-                opacity: 1;
-            }
+                top: 1px;
+                left: 4px;
 
-        }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 8px;
+
+                    border-right: 2px solid $white;
+                    border-bottom: 2px solid $white;
+                    transform:  rotateZ(40deg);
+                    opacity: 1;
+                }
+            }
         &__inputs{
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 4px;
             width: 100%;
         }
-        &__input{
-            width: 100%;
-            height: 31px;
-            border: 1px solid $gray-02;
-            border-radius: 4px;
-            padding-left: 12px;
-            font-family: 'Roboto-Regular';
-            font-size: 12.5px;
-            color: $gray-3;
-        }
+            &__input{
+                width: 100%;
+                height: 31px;
+                border-radius: 4px;
+                padding-left: .75rem;
+
+                font-family: 'Roboto-Regular';
+                font-size: .78125rem;
+                border: 1px solid $gray-3;
+                color: $gray-6;
+            }
         &__more{
             display: block;
-            font-family: 'Roboto-Regular';
-            font-size: 13px;
-            color: $orange;
-            margin-bottom: 30px;
+            margin-bottom: 1.875rem;
 
+            font-family: 'Roboto-Regular';
+            font-size: .8125rem;
+            color: $orange;
         }
     }
 

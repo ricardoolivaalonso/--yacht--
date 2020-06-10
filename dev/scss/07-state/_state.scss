@@ -1,0 +1,9 @@
+.is-price-visible{
+    opacity: 1;
+    transition: $time;
+}
+.is-modal-visible{
+    display: inherit;
+    transition: $time;
+    background-color: rgba($blue, .9);
+}

@@ -1,28 +1,58 @@
 .results-form{
-    background-color: $gray-0;
+    background-color: $gray-1;
 
+    @media(max-width: $sm){ background-color: $white;}
+
+    &__current{
+        width: 100%;
+        @media(max-width: $sm){ @include flex(flex, space-between, center, row, nowrap); }
+    }
     &__quantity{
+        @include fluid-type(14px, 15px);
         font-family: 'Roboto-Medium';
-        font-size: 15px;
         margin-right: 30px;
+        color: $black;
+
+        @media(max-width: $sm){ margin-right: 0; }
     }
     &__reset{
         font-family: 'Roboto-Regular';
-        font-size: 12.5px;
+        font-size: .78125rem;
         text-decoration: underline;
+        color: $black;
+
+        @media(max-width: $sm){ display: none; }
     }
+    &__icon{
+        width: 10px;
+        height: 10px;
+        object-fit: contain;
+        margin-right: 5px;
+    }
+
+    &__selects{ display: flex; }
     &__select{
-        font-family: 'Roboto-Regular';
-        font-size: 12.5px;
         width: 134px;
         height: 31px;
         padding: 0 12px;
+        margin: 0 2px;
 
+        font-family: 'Roboto-Regular';
+        font-size: .78125rem;
         border-radius: 4px;
-        border: 1px solid $gray-02;
-        box-shadow: 1px 2px 2px $gray-02;
+        border: 1px solid lighten($gray-2, 10);
+        box-shadow: 0 0 3px $gray-1;
+        color: $gray-6;
 
         @media(max-width: $sm){ display: none;}
+    }
+    &__span{
+        display: none;
+        font-family: 'Roboto-Medium';
+        font-size: 0.8125rem;
+        color: $black;
+        text-transform: uppercase;
+        @media(max-width: $sm){ display: inherit;}
 
     }
 }

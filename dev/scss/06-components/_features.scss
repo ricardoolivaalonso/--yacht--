@@ -9,6 +9,8 @@
         color: $blue;
         line-height: 1.6;
         text-transform: uppercase;
+        @media(max-width: $sm){ display: none;}
+
     }
     &__description{
         @include fluid-type(16px, 18px);
@@ -16,5 +18,17 @@
         color: $blue;
         text-transform: uppercase;
         margin-bottom: 35px;
+        letter-spacing: .25vw;
+        @media(max-width: $sm){
+            font-family: 'Roboto-Bold';
+            font-size: 18px;
+            color: $black;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+    }
+    &__decorator{
+        @media(max-width: $sm){ display: none;}
     }
 }
