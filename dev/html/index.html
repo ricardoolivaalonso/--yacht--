@@ -86,8 +86,8 @@
                         <span class="filter-form__title">Builders</span>
 
                         <div class="filter-form__row">
-                            <input class="filter-form__checkbox" type="checkbox" id="flb-t1" >
-                            <label class="filter-form__label" for="flb-t1">Azimut <small class="filter-form__span">(91)</small></label>
+                            <input class="filter-form__checkbox" type="checkbox" id="flb-t1" checked>
+                            <label class="filter-form__label" for="flb-t1" >Azimut <small class="filter-form__span">(91)</small></label>
                             <span class="filter-form__label-c"></span>
                         </div>
                         <div class="filter-form__row">
@@ -163,7 +163,7 @@
             <section class="filter-mobile">
                 <form class="filter-mobile__form">
 
-                    <input class="filter-mobile__input" type="text" placeholder="Search by Yacht Name">
+                    <input class="filter-mobile__input filter-mobile__input--icon" type="text" placeholder="Search by Yacht Name">
 
                     <div class="filter-mobile__row">
                         <div class="filter-mobile__buttons">
@@ -177,12 +177,17 @@
                     </div>
 
                     <div class="filter-mobile__price" id="fm-price">
-                        <div class="filter-mobile__coin">$USD</div>
+                        <div class="filter-mobile__coin input-cb">
+                            <label class="filter-mobile__label input-cb__label" for="rf-f">$USD</label>
+                            <input class="filter-mobile__checkbox  input-cb__checkbox" type="checkbox" id="rf-f">
+                            <label class="filter-mobile__label input-cb__label">€ EUR</label>
+
+                        </div>
                         <div class="filter-mobile__inputs">
                             <input class="filter-mobile__input" type="text" placeholder="Min Length">
                             <input class="filter-mobile__input" type="text" placeholder="Max Length">
                         </div>
-                        <div class="filter-mobile__range">
+                        <div class="filter-mobile__range" id="fm-r">
                             <div class="filter-form__row">
                                 <input class="filter-form__radio" type="radio" id="ffp-1" name="ffp">
                                 <label class="filter-form__label" for="ffp-1">Any</label>
@@ -222,7 +227,10 @@
             <!-- Results -->
             <form class="results-form">
                 <div class="results-form__current">
-                    <div class="results-form__featured"><span class="results-form__span">featured</span></div>
+                    <div class="results-form__featured input-cb">
+                        <label class="results-form__label input-cb__label" for="rf-f">featured</label>
+                        <input class="results-form__checkbox  input-cb__checkbox" type="checkbox" id="rf-f">
+                    </div>
                     <span class="results-form__quantity">1-24 of 1,520 Results</span>
                     <span class="results-form__reset"><img class="results-form__icon" src="img/refresh-icon.svg" alt="">Reset Filters</span>
                 </div>
@@ -499,6 +507,11 @@
                     </div>
                 </section> <!-- End yacht-List -->
             </section><!-- End Featured -->
+
+            <section class="bottom">
+                <img class="bottom__icon" src="img/top-icon.svg" alt="">
+                <span class="bottom__title">Back to top</span>
+            </section >
         </main><!-- End Main-Content -->
 
         <script src="./js/main.js"></script>

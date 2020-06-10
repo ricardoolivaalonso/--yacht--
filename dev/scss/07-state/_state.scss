@@ -1,9 +1,19 @@
 .is-price-visible{
-    opacity: 1;
-    transition: $time;
+    display: flex;
+    flex-direction: column;
 }
 .is-modal-visible{
-    display: inherit;
-    transition: $time;
-    background-color: rgba($blue, .9);
+    @media(max-width: $sm){
+        display: inherit;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($blue, .9);
+        z-index: $z-index50;
+    }
+}
+.is-filter-tx{
+    transform: translateX(100%);
 }

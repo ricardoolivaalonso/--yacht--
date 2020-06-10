@@ -46,13 +46,13 @@
 
         @media(max-width: $sm){ display: none;}
     }
-    &__span{
+    &__featured{
         display: none;
-        font-family: 'Roboto-Medium';
-        font-size: 0.8125rem;
-        color: $black;
-        text-transform: uppercase;
+        position: relative;
+        z-index: $z-index100;
         @media(max-width: $sm){ display: inherit;}
-
+    }
+    &__label{
+        margin-right: 10px;
     }
 }

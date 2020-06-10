@@ -71,13 +71,19 @@
 .featured{
     grid-area: featured;
     margin-bottom: 115px;
+    @media(max-width: $sm){ margin-bottom: 16px}
 }
 .modal{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    z-index: -1;
     display: none;
-    z-index: $z-index50;
-    transition: $time;
+}
+.bottom{
+    display: none;
+    @media(max-width: $sm){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 2rem 0;
+    }
 }

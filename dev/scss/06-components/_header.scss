@@ -3,6 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @media(max-width: $sm){ background-image: none; }
 
     &__blend{
         position: absolute;

@@ -78,3 +78,42 @@
         color: $white;
     }
 }
+/************/
+/* Checkbox */
+/************/
+.input-cb{
+    &__label{
+        font-family: 'Roboto-Medium';
+        font-size: 0.8125rem;
+        color: $black;
+        text-transform: uppercase;
+    }
+    &__checkbox{
+        position: relative;
+        width: 31px;
+        height: 14px;
+        border-radius: 10px;
+        appearance: none;
+        background-color: $gray-2;
+        cursor: pointer;
+
+        &:checked{ background-color: $orange;}
+        &::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+            left: 0;
+
+            border-radius: 50%;
+            background-color: $white;
+            border: 1px solid $gray-2;
+        }
+        &:checked::before{
+            left: calc(100% - 20px);
+            border: 1px solid $orange;
+        }
+
+    }
+}
