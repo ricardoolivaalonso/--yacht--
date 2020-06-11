@@ -29,30 +29,27 @@
         object-fit: contain;
         margin-right: 5px;
     }
-
     &__selects{ display: flex; }
-    &__select{
-        width: 134px;
-        height: 31px;
-        padding: 0 12px;
-        margin: 0 2px;
+        &__select{
+            width: 134px;
+            height: 31px;
+            padding-left: 12px;
+            margin: 0 2px;
 
-        font-family: 'Roboto-Regular';
-        font-size: .78125rem;
-        border-radius: 4px;
-        border: 1px solid lighten($gray-2, 10);
-        box-shadow: 0 0 3px $gray-1;
-        color: $gray-6;
+            font-family: 'Roboto-Regular';
+            font-size: .78125rem;
+            border-radius: 4px;
+            border: 1px solid lighten($gray-2, 10);
+            box-shadow: 0 0 3px $gray-1;
+            color: $gray-6;
 
-        @media(max-width: $sm){ display: none;}
-    }
-    &__featured{
-        display: none;
-        position: relative;
-        z-index: $z-index100;
-        @media(max-width: $sm){ display: inherit;}
-    }
-    &__label{
-        margin-right: 10px;
-    }
+            @media(max-width: $sm){ display: none;}
+        }
+        &__featured{
+            display: none;
+            position: relative;
+            z-index: $z-index100;
+            @media(max-width: $sm){ display: inherit;}
+        }
+        &__label{ margin-right: 10px; }
 }

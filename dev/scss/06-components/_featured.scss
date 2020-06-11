@@ -1,34 +1,33 @@
 .featured{
     &__info{
         margin: 0 $gap;
+
         @media(max-width: $sm){ margin: 0 $gap / 2; }
     }
     &__title{
         @include fluid-type(32px, 40px);
         font-family: 'Austin';
-        color: $blue;
         line-height: 1.6;
         text-transform: uppercase;
-        @media(max-width: $sm){ display: none;}
+        color: $blue;
 
+        @media(max-width: $sm){ display: none;}
     }
     &__description{
         @include fluid-type(16px, 18px);
+        margin-bottom: $gap;
         font-family: 'Barlow-Medium';
-        color: $blue;
         text-transform: uppercase;
-        margin-bottom: 35px;
         letter-spacing: .25vw;
+        color: $blue;
+
         @media(max-width: $sm){
             font-family: 'Roboto-Bold';
             font-size: 18px;
-            color: $black;
             text-transform: none;
             letter-spacing: 0;
+            color: $black;
         }
-
     }
-    &__decorator{
-        @media(max-width: $sm){ display: none;}
-    }
+    &__decorator{ @media(max-width: $sm){ display: none;} }
 }

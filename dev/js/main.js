@@ -5,6 +5,7 @@ let modal = document.querySelector('#modal')
 let filterM = document.querySelectorAll('.filter-mobile__range .filter-form__label')
 let filterR = document.querySelector('#fm-r')
 let yArrow = document.querySelectorAll('.yacht__arrow')
+
 let i = 0
 /*===== Funciones =====*/
 let showPrice = () => {
@@ -29,5 +30,6 @@ let changeSlider = (e) => {
 /*===== Listeners =====*/
 fmTrigger.addEventListener('click', showPrice)
 modal.addEventListener('click', showPrice)
+
 filterM.forEach( f => f.addEventListener('click', showFilter) );
 yArrow.forEach( y => y.addEventListener('click', changeSlider) );

@@ -58,7 +58,7 @@
     @include flex(flex, space-between, center, row, nowrap);
     height: 45px;
     margin: $gap;
-    padding: 0 1rem;
+    padding: 0 16px;
 
     @media(max-width: $sm){ margin: 0; }
 }
@@ -71,7 +71,7 @@
 .featured{
     grid-area: featured;
     margin-bottom: 115px;
-    @media(max-width: $sm){ margin-bottom: 16px}
+    @media(max-width: $sm){ margin-bottom: 16px; }
 }
 .modal{
     z-index: -1;
@@ -84,6 +84,6 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        padding: 2rem 0;
+        padding: 32px 0;
     }
 }

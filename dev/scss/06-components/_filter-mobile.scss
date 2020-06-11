@@ -18,7 +18,6 @@
             grid-column-gap: 4px;
             width: 100%;
         }
-
         &__input{
             width: 100%;
             height: 42px;
@@ -28,17 +27,19 @@
             font-size: .875rem;
             border-radius: 5px;
             border: 1px solid $gray-3;
+
             &::placeholder{ color: $black; }
 
             &--icon{
+                padding-left: 40px;
+
                 background-image: url("../img/m-search-icon.svg");
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-size: 20px 20px;
                 background-position: 10px;
-                padding-left: 40px;
-                &::placeholder{ color: $gray-2; }
 
+                &::placeholder{ color: $gray-2; }
             }
         }
         &__button{
@@ -67,14 +68,14 @@
         &__icon{ margin-right: 5px; }
 
     &__price{
+        display: none;
         position: absolute;
         top: 105px;
         left: 0;
         width: 100%;
         padding: 0 $gap / 2 ;
-        background: $white;
         border-top: 2px solid $orange;
-        display: none;
+        background: $white;
     }
     &__coin{
         display: flex;
@@ -83,13 +84,11 @@
         margin-bottom: 24px;
         border-bottom: 1px solid $gray-3;
     }
-        &__checkbox{
-            margin: 0 5px;
-        }
+        &__checkbox{ margin: 0 5px; }
     &__range{
+        width: 50%;
         padding-top: 16px;
         padding-left: 12px;
-        width: 50%;
     }
     &__done{
         display: flex;
@@ -105,5 +104,4 @@
         color: $orange;
         background-color: transparent;
     }
-
 }
